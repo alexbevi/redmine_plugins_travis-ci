@@ -19,7 +19,31 @@ In order to take advantage of the [Travis](https://travis-ci.org) continuous int
 
 ## Configuration
 
-Other than providing your plugin name in the ``.travis.yml`` file, all other configuration is standard Travis configuration.
+An annotated sample is provided below to help get everything up and running.
+
+``` yml
+language: ruby          # has to be ruby, as Redmine is a Ruby on Rails application ;)
+rvm:
+  - 2.0.0               # versions of ruby to test against
+  - 1.9.3
+branches:               # if we're building against something other than the master
+  only:                 # branch on Github
+    - testing
+env:
+  - REDMINE_VERSION=2.3.3 VERBOSE=yes      # The version of redmine to use when testing
+script:
+  - export PLUGIN=<add plugin name here>   # The name of the plugin that we're testing
+  - export WORKSPACE=$(pwd)/workspace
+  - export PATH_TO_PLUGIN=$(pwd)
+  - export PATH_TO_REDMINE=$WORKSPACE/redmine
+  - mkdir $WORKSPACE
+  - bash -x ./.travis-init.sh -r || exit 1
+  - bash -x ./.travis-init.sh -i || exit 1
+  - bash -x ./.travis-init.sh -t || exit 1
+  - bash -x ./.travis-init.sh -u || exit 1
+```
+
+See the Travis CI configuration guide for more advanced options.
 
 
 ## Acknowlegements
