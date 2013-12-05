@@ -49,3 +49,6 @@ See the Travis CI configuration guide for more advanced options.
 ## Acknowlegements
 
 The configuration and scripts were extracted and modified from work done by the authors of the [Redmine Backlogs](https://github.com/backlogs/redmine_backlogs) project. None of this would be possible without their original efforts, so big ups from me to them!
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/alexbevi/redmine_plugins_travis-ci/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
