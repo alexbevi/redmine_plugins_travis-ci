@@ -12,7 +12,7 @@ In order to take advantage of the [Travis](https://travis-ci.org) continuous int
 
 ## Installation
 
-1. Copy the ``.travis.*`` files to the root of your plugin.
+1. Copy the ``.travis*`` files to the root of your plugin.
 2. Edit the ``.travis.yml`` file and update the PLUGIN export with your plugin name
 3. Commit the updates to your repository and push to Github
 4. Register your project with Travis (see their [Getting Started](http://about.travis-ci.org/docs/user/getting-started/) guide for more info)
